@@ -1,3 +1,4 @@
+/* * Global */
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -6,6 +7,7 @@ body {
   background-color: rgba(234, 226, 230, 0.58);
 }
 
+/* * Header */
 .header-logo {
   width: 200px;
   display: block;
@@ -13,30 +15,41 @@ body {
   margin-right: auto;
 }
 
+/* * Footer */
 .footer-logo {
   width: 50px;
 }
 
+/* * Navigation (nav)*/
 ul {
-  display: flex;
   list-style: none;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-h1,
-h2,
-h3 {
-  text-align: center;
-  margin-top: 50px;
+a {
+  text-decoration: none;
+  color: rgba(51, 162, 142, 1);
 }
 
-h3 {
-  margin-top: 10px;
+/* * Aside */
+aside {
+  width: 40%;
+  float: left;
+}
+
+/* * Main */
+h1,
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 p {
   text-align: center;
+  padding-bottom: 5px;
 }
 
 h1 {
@@ -44,9 +57,12 @@ h1 {
   font-size: 80px;
 }
 
-a {
-  text-decoration: none;
-  color: rgba(51, 162, 142, 1);
+
+/* * News section */
+h3 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .news {
@@ -58,7 +74,23 @@ article {
   border: 5px solid rgba(51, 162, 142, 1);
 }
 
+/* * Iframes */
 iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* * Video */
+video {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* * Audio */
+audio {
   display: block;
   margin-left: auto;
   margin-right: auto;

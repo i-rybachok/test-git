@@ -3,90 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./normalize.css" />
+    <title>HTML Semantics + CSS</title>
+    <!-- * Connecting with css files -->
+    <link rel="stylesheet" href="../../normalize.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- * Connecting fonts from "google fonts" -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>HTML Semantics</title>
   </head>
   <body>
-    <a href="../../index.html">HOME</a>
-    <header>
-      <img src="./assets/Asset 2@3x.png" alt="logo" class="header-logo" />
-      <h1>This is where your dream house is being created!</h1>
-      <nav>
+    <div class="app">
+      <a href="../../index.html">HOME</a>
+      <!-- * Header -->
+      <header>
+        <img src="./assets/logo.png" alt="logo" class="header-logo" />
+        <h1>This is where your dream house is being created!</h1>
+        <!-- * Nav in header -->
+        <nav>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#resume">My resume</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- * Main -->
+      <main>
+        <!-- <aside>
+          <ol>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#resume">My resume</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ol>
+        </aside> -->
+        <section id="about">
+          <h2>About us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error
+            quibusdam dolores eveniet rerum quasi provident nam enim quisquam
+            tempore ut recusandae, id atque autem, nobis accusamus, ad optio
+            repudiandae?
+          </p>
+        </section>
+        <section id="news">
+          <h2>News</h2>
+          <div class="news">
+            <!-- * Two articles for independent content -->
+            <article>
+              <h3>First piece of news</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur obcaecati natus vero unde! Tempora incidunt nesciunt
+                aspernatur ratione, quam omnis nobis! Illo vitae fuga
+                repellendus! Ducimus adipisci laborum rem aliquid.
+              </p>
+            </article>
+            <article>
+              <h3>Second piece of news</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                reiciendis architecto sit necessitatibus aliquam iure assumenda
+                velit molestiae nisi perferendis voluptatibus, odio eius animi
+                dignissimos ipsum. At unde dicta atque.
+              </p>
+            </article>
+          </div>
+        </section>
+        <!-- * Two iframes -->
+        <section id="resume">
+          <h2>My resume (using iframe)</h2>
+          <iframe src="../html-basics/index.html" frameborder="1"></iframe>
+        </section>
+        <section id="video-iframe">
+          <h2>Video (using iframe)</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dEBVe8Ij7JU?si=499CRHhkZwdJIFxn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <!-- * Video and audio tags -->
+        <section id="video-tag">
+          <h2>Video(tag)</h2>
+          <video src="./assets/rain.mp4" controls>Video</video>
+        </section>
+        <section id="audio-tag">
+          <h2>Audio(tag)</h2>
+          <audio src="./assets/cat-is-purring.mp3" controls loop>Audio</audio>
+        </section>
+      </main>
+      <!-- * Footer -->
+      <footer id="contacts">
         <ul>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#resume">My resume</a></li>
-          <li><a href="#video">Video</a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li>
+            <img src="./assets/logo.png" alt="logo" class="footer-logo" />
+          </li>
+          <li><a href="mailto:qwerty@gmail.com">qwerty@gmail.com</a></li>
+          <li><a href="tel:+38000000000">+38000000000</a></li>
+          <li><a href="https//instagram.com">Instagram</a></li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
-        <h2>About us</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error
-          quibusdam dolores eveniet rerum quasi provident nam enim quisquam
-          tempore ut recusandae, id atque autem, nobis accusamus, ad optio
-          repudiandae?
-        </p>
-      </section>
-      <section id="news">
-        <h2>News</h2>
-        <div class="news">
-          <article>
-            <h3>First piece of news</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur obcaecati natus vero unde! Tempora incidunt nesciunt
-              aspernatur ratione, quam omnis nobis! Illo vitae fuga repellendus!
-              Ducimus adipisci laborum rem aliquid.
-            </p>
-          </article>
-          <article>
-            <h3>Second piece of news</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-              reiciendis architecto sit necessitatibus aliquam iure assumenda
-              velit molestiae nisi perferendis voluptatibus, odio eius animi
-              dignissimos ipsum. At unde dicta atque.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="resume">
-        <h3>My resume</h3>
-        <iframe src="../html-basics/index.html" frameborder="1"></iframe>
-      </section>
-      <section id="video">
-        <h3>Video</h3>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/dEBVe8Ij7JU?si=499CRHhkZwdJIFxn"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </section>
-    </main>
-    <footer id="contacts">
-      <ul>
-        <li>
-          <img src="./assets/Asset 2@3x.png" alt="logo" class="footer-logo" />
-        </li>
-        <li><a href="mailto:qwerty@gmail.com">qwerty@gmail.com</a></li>
-        <li><a href="tel:+38000000000">+38000000000</a></li>
-        <li><a href="https//instagram.com">Instagram</a></li>
-      </ul>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
