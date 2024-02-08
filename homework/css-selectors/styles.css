@@ -1,0 +1,132 @@
+/* * Styles for everything except list itself*/
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #2e2d2d;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f0ffff;
+  font-weight: 400;
+  padding: 10px;
+}
+
+h1,
+h2 {
+  color: #e25252;
+  text-align: center;
+  background-color: #414040;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+h2 {
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.footer-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* * Styles for list in usual state*/
+
+ul {
+  width: 50%;
+  list-style: none;
+  margin: 20px auto;
+}
+
+
+li {
+  color: #f0ffff;
+  text-align: left;
+  background-color: #5957bd;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  padding: 5px;
+  transition: border .35s ease-in-out;
+  transition: background-color .35s ease-in-out;
+}
+
+/* ">" - only selects direct descendant(child, not grandchild) */
+/* " " - selects all descendants(both children and grandchildren)*/
+label:nth-child(2n)>li {
+  background-color: #5d7957;
+}
+
+/* * Styles for list in hover state*/
+/* Changes background of every even label when its li is hovered over */
+label:nth-child(2n) li:hover {
+  background-color: #32412e;
+}
+
+/* Changes background of every odd label when its li is hovered over */
+label:nth-child(2n-1) li:hover {
+  background-color: #343270;
+}
+
+/* Changes (user thinks adds) border color to top and bottom from transparent to white when hovered over */
+li:hover {
+  border-top-color: #f0ffff;
+  border-bottom-color: #f0ffff;
+}
+
+/* * Styles input */
+/* It hides the checkbox itself */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* * ::after and ::before */
+/* Span of a first label*/
+label:first-child span::after {
+  content: " (1 can)";
+}
+
+/* Span of a second label */
+label:nth-child(2) span::after {
+  content: " (1 bottle)";
+}
+
+/* Span of a every 2nd label, starting from the 3rd label*/
+label:nth-child(2n+3) span::after {
+  content: " (1 kg)";
+}
+
+/* Span of a third label (counting from bottom) */
+label:nth-last-child(3) span::after {
+  content: " (1 package)";
+}
+
+/* Span of a last label */
+label:last-of-type span::before {
+  content: "1 stick of "
+}
+
+
+/* * Behavior, if li is checked */
+
+/* Selects every span, which is a neighbour of an input(if this input is :checked) (this input must have a type attribute that equals to checkbox) */
+input[type="checkbox"]:checked+span {
+  text-decoration: line-through;
+  color: #899696fb;
+}
+
+/* * Behavior, if li is active */
+/* Selects li, that is a parent of an input(if this input is :active(being clicked on)) (this input must have a type attribute that equals to checkbox)*/
+li:has(input[type="checkbox"]:active) {
+  background-color: #e25252;
+}
+
+/* * Styles for anchor */
+
+a {
+  color: #f0ffff;
+}
