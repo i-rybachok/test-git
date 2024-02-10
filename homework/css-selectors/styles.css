@@ -4,19 +4,16 @@
 }
 
 body {
-  background-color: #2e2d2d;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #f0ffff;
+  background-color: #3B3F45;
   font-weight: 400;
-  padding: 10px;
+  min-height: 100vh;
 }
 
 h1,
 h2 {
-  color: #e25252;
+  color: #FF8984;
   text-align: center;
-  background-color: #414040;
+  background-color: #4A4F56;
 }
 
 h1 {
@@ -46,7 +43,7 @@ ul {
 li {
   color: #f0ffff;
   text-align: left;
-  background-color: #5957bd;
+  background-color: #88839E;
   border-width: 2px;
   border-color: transparent;
   border-style: solid;
@@ -58,18 +55,18 @@ li {
 /* ">" - only selects direct descendant(child, not grandchild) */
 /* " " - selects all descendants(both children and grandchildren)*/
 label:nth-child(2n)>li {
-  background-color: #5d7957;
+  background-color: #7A7593;
 }
 
 /* * Styles for list in hover state*/
 /* Changes background of every even label when its li is hovered over */
 label:nth-child(2n) li:hover {
-  background-color: #32412e;
+  background-color: #555263;
 }
 
 /* Changes background of every odd label when its li is hovered over */
 label:nth-child(2n-1) li:hover {
-  background-color: #343270;
+  background-color: #625E77;
 }
 
 /* Changes (user thinks adds) border color to top and bottom from transparent to white when hovered over */
@@ -78,11 +75,7 @@ li:hover {
   border-bottom-color: #f0ffff;
 }
 
-/* * Styles input */
-/* It hides the checkbox itself */
-input[type="checkbox"] {
-  display: none;
-}
+
 
 /* * ::after and ::before */
 /* Span of a first label*/
@@ -121,9 +114,9 @@ input[type="checkbox"]:checked+span {
 
 /* * Behavior, if li is active */
 /* Selects li, that is a parent of an input(if this input is :active(being clicked on)) (this input must have a type attribute that equals to checkbox)*/
-li:has(input[type="checkbox"]:active) {
-  background-color: #e25252;
-}
+/* li:has(input[type="checkbox"]:active) {
+  background-color: #FF8984;
+} */
 
 /* * Styles for anchor */
 
