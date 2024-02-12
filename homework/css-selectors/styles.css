@@ -1,9 +1,6 @@
 /* * Styles for everything except list itself*/
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: #3B3F45;
   font-weight: 400;
   min-height: 100vh;
@@ -26,17 +23,21 @@ h2 {
 }
 
 .footer-content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  padding: 10px;
+  background-color: #4A4F56;
+  border: 1px solid transparent;
+  color: #FF8984;
 }
 
 /* * Styles for list in usual state*/
 
 ul {
-  width: 50%;
+  max-width: 600px;
   list-style: none;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 
 
