@@ -3,65 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Figma basics</title>
+    <title>Figma basics(Productly)</title>
+    <!-- * Styles -->
     <link rel="stylesheet" href="../../normalize.css" />
     <link rel="stylesheet" href="../../main.css" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./variables.css" />
+    <!-- * Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <!-- * Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <a href="../../index.html">HOME</a>
     <div class="app">
       <!-- * Header -->
-      <header class="header" id="header">
-        <div class="header-wrapper">
-          <nav>
-            <ul class="header-list">
-              <!-- * Logo -->
-              <li class="item-list-nav">
-                <a href="#header"
-                  ><img src="./assets/Logo.svg" alt="Logo" class="logo-img"
-                /></a>
-              </li>
+      <header class="header">
+        <div class="wrapper header-wrapper">
+          <!-- * Logo -->
+          <a href="#" class="logo"
+            ><img src="./assets/Logo.png" alt="Logo"
+          /></a>
+          <nav class="navigation">
+            <ul class="navigation-list">
               <!-- * Header-content -->
-              <li class="item-list-nav"><a href="#product">Product</a></li>
-              <li class="item-list-nav">
-                <a href="#customers">Customers</a>
+              <li class="navigation-list-item">
+                <a href="#product" class="navigation-list-item-a">Product</a>
               </li>
-              <li class="item-list-nav"><a href="#pricing">Pricing</a></li>
-              <li class="item-list-nav">
-                <a href="#resources">Resources</a>
+              <li class="navigation-list-item">
+                <a href="#customers" class="navigation-list-item-a"
+                  >Customers</a
+                >
               </li>
-              <!-- * Header-buttons -->
-              <li class="item-list-nav">
-                <button class="sign-in-button">Sign In</button>
+              <li class="navigation-list-item">
+                <a href="#pricing" class="navigation-list-item-a">Pricing</a>
               </li>
-              <li class="item-list-nav">
-                <button class="sign-up-button">Sign Up</button>
+              <li class="navigation-list-item">
+                <a href="#resources" class="navigation-list-item-a"
+                  >Resources</a
+                >
               </li>
             </ul>
           </nav>
+          <!-- * Header-buttons -->
+          <div class="header-buttons">
+            <button type="button" class="button button--sign-in">
+              Sign In
+            </button>
+            <button type="button" class="button button--sign-up">
+              Sign Up
+            </button>
+          </div>
         </div>
       </header>
       <!-- * Main -->
       <main>
-        <!-- * Hero -->
-        <section class="hero">
-          <div class="hero-content">
-            <h1 class="hero-title">The Design Thinking superpowers</h1>
-            <p class="hero-content">
-              Tools, tutorials, design and innovation experts, all in one place!
-              The most intuitive way to imagine your next user experience.
-            </p>
-            <button class="hero-button">Get started</button>
+        <!-- * Banner -->
+        <section class="banner">
+          <div class="wrapper banner-wrapper">
+            <div class="banner-content">
+              <h1 class="banner-title">The Design Thinking superpowers</h1>
+              <p class="banner-text">
+                Tools, tutorials, design and innovation experts, all in one
+                place! The most intuitive way to imagine your next user
+                experience.
+              </p>
+              <button class="button button--big">Get started</button>
+            </div>
+            <img
+              src="./assets/Image.svg"
+              alt="happy people"
+              class="banner-img"
+            />
           </div>
-          <img src="./assets/Image.svg" alt="happy people" class="hero-img" />
         </section>
       </main>
       <!-- * Footer -->
