@@ -1,0 +1,11 @@
+:root {
+  /* Colors */
+  --c-background: #3399CC;
+  --c-white: #fff;
+  /* Fonts */
+  --f-base: "Roboto", sans-serif;
+  /* Font weights */
+  --fw-base: 400;
+  /* Font sizes */
+  --fs-base: 22px;
+}

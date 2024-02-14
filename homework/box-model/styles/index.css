@@ -1,0 +1,149 @@
+/* * Global */
+
+body {
+  height: 100vh;
+  background-color: var(--c-background);
+  color: var(--c-white);
+  font-family: var(--f-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+}
+
+.table-wrapper {
+  border: 1px solid var(--c-white);
+  margin-left: 135px;
+  margin-right: 135px;
+}
+
+/* * Styles for every city */
+.city-wrapper {
+  opacity: 0.7;
+  height: 147px;
+  border: 1px solid var(--c-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  transition: all .35s ease-in-out;
+  cursor: pointer;
+}
+
+.city-wrapper:hover {
+  opacity: 1;
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
+
+/* * Header and footer */
+h1,
+h2 {
+  text-align: left;
+  font-weight: var(--fw-base);
+}
+
+h1 {
+  font-size: 1em;
+  margin-bottom: 35px;
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 0.72em;
+  margin-top: 35px;
+}
+
+.header-wrapper,
+.footer-wrapper {
+  margin-left: 135px;
+  margin-right: 135px;
+}
+
+/* * First row */
+.first-row {
+  display: flex;
+  align-items: center;
+}
+
+.first-row-lisbon {
+  background-color: #93cae6;
+  /* flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 0; */
+  /* Запис знизу - скорочений запис трьох рядків зверху */
+  flex: 2 1 0;
+}
+
+.first-row-paris {
+  flex: 1 2 0;
+  background-color: #33CCCC;
+}
+
+.first-row-belgrade {
+  flex: 1 2 0;
+  background-color: #996699;
+}
+
+/* * Second row */
+.second-row {
+  display: flex;
+}
+
+.second-row-city {
+  flex: 1 1 0;
+}
+
+.second-row-venice {
+  background-color: #C24747;
+}
+
+.second-row-tel-avive {
+  background-color: #E2674A;
+}
+
+.second-row-cair {
+  background-color: #FFCC66;
+}
+
+.second-row-new-york {
+  background-color: #99CC99;
+}
+
+/* * Third row */
+.third-row {
+  display: flex;
+}
+
+.third-row-new-delhi {
+  flex: 1 2 0;
+  background-color: #669999;
+}
+
+.third-row-san-francisco {
+  flex: 2 1 0;
+  background-color: #CC6699;
+}
+
+.third-row-tokyo {
+  flex: 1 2 0;
+  background-color: #339966;
+}
+
+/* * Fourth row */
+.fourth-row {
+  display: flex;
+}
+
+.fourth-row-sydney {
+  flex: 1 1 0;
+  background-color: #666699;
+}
+
+/* * Icons */
+.wi {
+  font-size: 42px;
+
+}
