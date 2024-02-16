@@ -10,7 +10,6 @@ body {
   font-weight: 400;
   color: var(--c-black);
   background-color: var(--c-white);
-  min-height: 100vh;
 }
 
 .wrapper {
@@ -36,9 +35,19 @@ body {
   border: 1px solid var(--c-primary);
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.35s ease-in-out;
 }
 
 /* * Header*/
+.header {
+  background-color: var(--c-white);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -46,18 +55,18 @@ body {
   flex-wrap: wrap;
   padding-top: 15px;
   padding-bottom: 15px;
-  min-height: 80px;
 }
 
 .logo {
   max-width: 200px;
-  height: fit-content;
 }
 
 .navigation-list-item-a {
-  color: #2F281E;
+  color: var(--c-black);
+  /* Use padding instead of gap for better UX (expanding hover field) */
   padding: 10px;
   display: flex;
+  transition: all 0.35s ease-in-out;
 }
 
 .navigation-list-item-a:hover {
@@ -93,7 +102,7 @@ body {
 
 /* * Banner */
 .banner-wrapper {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,7 +110,6 @@ body {
 }
 
 .banner-content {
-  width: 100%;
   max-width: 500px;
 }
 
@@ -124,6 +132,7 @@ body {
   padding-right: 45px;
   height: 50px;
   font-weight: 700;
+  text-align: center;
 }
 
 .banner-img {
