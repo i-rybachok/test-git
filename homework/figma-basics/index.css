@@ -12,10 +12,6 @@ body {
   background-color: var(--c-white);
 }
 
-.home {
-  position: fixed;
-}
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -46,10 +42,9 @@ body {
 .header {
   background-color: var(--c-white);
   position: fixed;
-  top: 20px;
+  top: 0;
   right: 0;
   left: 0;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .header-wrapper {
@@ -141,4 +136,11 @@ body {
 
 .banner-img {
   max-width: fit-content;
+}
+
+/* * Home anchor */
+.home {
+  position: fixed;
+  left: 50px;
+  top: 100px;
 }
