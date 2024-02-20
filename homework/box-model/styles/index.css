@@ -26,7 +26,7 @@ p {
   display: flex;
 }
 
-.block-wrapper {
+.row-block-wrapper {
   height: 147px;
   border: 1px solid var(--c-white);
   display: flex;
@@ -38,7 +38,7 @@ p {
   cursor: pointer;
 }
 
-.block-wrapper:hover {
+.row-block-wrapper:hover {
   opacity: 1;
 }
 

@@ -1,0 +1,101 @@
+.row {
+  display: flex;
+  &-block {
+    // * Wrapper
+    &-wrapper {
+      height: 147px;
+      border: 1px solid var(--c-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      transition: all 0.35s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    // * Sizes of blocks
+    &--small {
+      width: 25%;
+    }
+    &--large {
+      width: 50%;
+    }
+    &--whole-width {
+      width: 100%;
+    }
+    // * Colors
+    // First row
+    &--light-blue {
+      background-color: rgba(148, 202, 230, 0.7);
+      &:hover {
+        background-color: rgba(148, 202, 230, 1);
+      }
+    }
+    &--dark-blue {
+      background-color: rgba(51, 204, 204, 0.7);
+      &:hover {
+        background-color: rgba(51, 204, 204, 1);
+      }
+    }
+    &--violet {
+      background-color: rgba(153, 102, 153, 0.7);
+      &:hover {
+        background-color: rgba(153, 102, 153, 1);
+      }
+    }
+    // Second row
+    &--red {
+      background-color: rgba(194, 71, 71, 0.7);
+      &:hover {
+        background-color: rgba(194, 71, 71, 1);
+      }
+    }
+    &--orange {
+      background-color: rgba(226, 103, 74, 0.7);
+      &:hover {
+        background-color: rgba(226, 103, 74, 1);
+      }
+    }
+    &--yellow {
+      background-color: rgba(255, 204, 102, 0.7);
+      &:hover {
+        background-color: rgba(255, 204, 102, 1);
+      }
+    }
+    &--light-green {
+      background-color: rgba(153, 204, 153, 0.7);
+      &:hover {
+        background-color: rgba(153, 204, 153, 1);
+      }
+    }
+    // Third row
+    &--dark-green {
+      background-color: rgba(102, 153, 153, 0.7);
+      &:hover {
+        background-color: rgba(102, 153, 153, 1);
+      }
+    }
+    &--pink {
+      background-color: rgba(204, 102, 153, 0.7);
+      &:hover {
+        background-color: rgba(204, 102, 153, 1);
+      }
+    }
+    &--normal-green {
+      background-color: rgba(51, 153, 102, 0.7);
+      &:hover {
+        background-color: rgba(51, 153, 102, 1);
+      }
+    }
+    // Fourth row
+    &--purple {
+      background-color: rgba(102, 102, 153, 0.7);
+      &:hover {
+        background-color: rgba(102, 102, 153, 1);
+      }
+    }
+  }
+}
