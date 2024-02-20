@@ -1,0 +1,186 @@
+/* * Global */
+body {
+  background-color: var(--c-black);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* * For all figures */
+.figures-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  transition: transform 3s ease-in-out;
+}
+
+/* * Lines */
+.line {
+  position: fixed;
+  width: 650px;
+  height: 3px;
+  background-color: var(--c-white);
+}
+
+.line--45 {
+  transform: rotate(45deg);
+}
+
+.line--90 {
+  transform: rotate(90deg);
+}
+
+.line--135 {
+  transform: rotate(135deg);
+}
+
+/* * Circles */
+.circles-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  width: 650px;
+  /* For positioning small circles */
+  position: relative;
+}
+
+/* * Central circles */
+.outter-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* For making circles be infront of lines */
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background-color: var(--c-white);
+  border-radius: 50%;
+  border: 12px solid var(--c-primary);
+  transition: transform 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.inner-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--c-secondary);
+  border: 12px solid var(--c-primary);
+}
+
+/* * Small circles */
+/* * Animation while small circle:hover */
+/* Small circles should go to the center */
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--c-primary);
+  border: 12px solid var(--c-white);
+  border-radius: 50%;
+  transition: transform 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.circle--top {
+  top: 0;
+}
+
+.circle--top:hover {
+  transform: translateY(50px);
+}
+
+.circle--top-right {
+  /* 50px - це половина діаметра кола, але потрібно трішки більше */
+  top: 75px;
+  right: 75px;
+}
+
+.circle--top-right:hover {
+  transform: translate(-50px, 50px);
+}
+
+.circle--right {
+  right: 0;
+}
+
+.circle--right:hover {
+  transform: translateX(-50px);
+}
+
+.circle--bottom-right {
+  bottom: 75px;
+  right: 75px;
+}
+
+.circle--bottom-right:hover {
+  transform: translate(-50px, -50px);
+}
+
+
+.circle--bottom {
+  bottom: 0;
+}
+
+.circle--bottom:hover {
+  transform: translateY(-50px);
+}
+
+.circle--bottom-left {
+  bottom: 75px;
+  left: 75px;
+}
+
+.circle--bottom-left:hover {
+  transform: translate(50px, -50px);
+}
+
+.circle--left {
+  left: 0;
+}
+
+.circle--left:hover {
+  transform: translateX(50px);
+}
+
+.circle--top-left {
+  top: 75px;
+  left: 75px;
+}
+
+.circle--top-left:hover {
+  transform: translate(50px, 50px);
+}
+
+/* * Animation while .figures-wrapper:hover */
+/* Everything should move around */
+.figures-wrapper:hover {
+  transform: rotate(360deg);
+}
+
+/* * Animation while outter-circle:active */
+/* Everything should move around and small circles should get bigger*/
+.small-circles {
+  transition: transform 3s ease-in-out;
+  width: 650px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outter-circle:active+.small-circles {
+  transform: rotate(360deg);
+}
+
+.outter-circle:active+.small-circles>.circle {
+  transform: scale(1.5);
+}

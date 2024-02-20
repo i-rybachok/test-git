@@ -1,0 +1,17 @@
+{
+  "name": "beetroot",
+  "version": "1.0.0",
+  "description": "pug scss",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pug -w src/index.pug --out ."
+  },
+  "keywords": [
+    "pug",
+    "scss",
+    "css",
+    "html"
+  ],
+  "author": "iryna rybachok rybachok19ira@gmail.com",
+  "license": "ISC"
+}

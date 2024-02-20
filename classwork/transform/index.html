@@ -4,27 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Position</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../../normalize.css" />
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="app">
       <div class="wrapper">
-        <div class="line"></div>
-        <div class="line line--45"></div>
-        <div class="line line--90"></div>
-        <div class="line line--135"></div>
-        <div class="outter-circle">
-          <div class="inner-circle"></div>
-        </div>
-        <div class="positioning">
-          <div class="circle circle--top"></div>
-          <div class="circle circle--top-right"></div>
-          <div class="circle circle--right"></div>
-          <div class="circle circle--bottom-right"></div>
-          <div class="circle circle--bottom"></div>
-          <div class="circle circle--bottom-left"></div>
-          <div class="circle circle--left"></div>
-          <div class="circle circle--top-left"></div>
+        <div class="figures-wrapper">
+          <!-- Lines -->
+          <div class="line"></div>
+          <div class="line line--45"></div>
+          <div class="line line--90"></div>
+          <div class="line line--135"></div>
+          <!-- Central circles -->
+          <div class="circles-wrapper">
+            <!-- Big circle -->
+            <div class="outter-circle">
+              <!-- Small circle -->
+              <div class="inner-circle"></div>
+            </div>
+            <!-- Small other circles -->
+            <div class="small-circles">
+              <div class="circle circle--top"></div>
+              <div class="circle circle--top-right"></div>
+              <div class="circle circle--right"></div>
+              <div class="circle circle--bottom-right"></div>
+              <div class="circle circle--bottom"></div>
+              <div class="circle circle--bottom-left"></div>
+              <div class="circle circle--left"></div>
+              <div class="circle circle--top-left"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
