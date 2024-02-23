@@ -9,8 +9,18 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Pug basics
+    //- Favicon
     link(rel="shortcut icon", href="", type="image/x-icon")
+    //- Icons
+    link(rel="stylesheet", href="./favicon.ico", type="image/x-icon" )
+    //- Fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet')
   body 
     .app 
-      +header 
-      div  
+      a(href="../../index.html", target="_blank") HOME
+      //- Header
+      +header.wrapper 
+      //- Table
+      +main 
