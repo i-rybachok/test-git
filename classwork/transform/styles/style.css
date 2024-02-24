@@ -11,25 +11,26 @@ body {
 }
 
 /* * Lines */
+
 .line {
   position: fixed;
   z-index: 1;
   width: 650px;
   height: 3px;
   background-color: var(--c-white);
-  transition: all 3s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 
 .line--45 {
-  transform: rotate(45deg);
+  rotate: 45deg;
 }
 
 .line--90 {
-  transform: rotate(90deg);
+  rotate: 90deg;
 }
 
 .line--135 {
-  transform: rotate(135deg);
+  rotate: 135deg;
 }
 
 /* * For lines and small circles */
@@ -41,7 +42,6 @@ body {
   width: 650px;
   /* For positioning small circles */
   position: relative;
-  transition: transform 3s ease-in-out;
 }
 
 /* * Circles */
@@ -59,7 +59,6 @@ body {
   background-color: var(--c-white);
   border-radius: 50%;
   border: 12px solid var(--c-primary);
-  transition: transform 0.35s ease-in-out;
   cursor: pointer;
 }
 
@@ -82,8 +81,9 @@ body {
   background-color: var(--c-primary);
   border: 12px solid var(--c-white);
   border-radius: 50%;
-  transition: transform 0.35s ease-in-out;
   cursor: pointer;
+  /* Більше секунд, щоб кола не дьоргались при ховері */
+  transition: transform 3s ease-in-out;
 }
 
 .circle--top {
@@ -168,6 +168,7 @@ body {
   z-index: 2;
 }
 
-.outter-circle:active+.moving-parts {
+/* ! Мають рухатись фігурки, а не батько */
+.outter-circle:active+.moving-parts .moving-part {
   transform: rotate(360deg);
 }
