@@ -1,0 +1,6 @@
+mixin city-wrapper(size, color, city, temp, icon)
+  div(class = size, class = color).row-block-wrapper
+    div 
+      span=city
+    div.text=temp
+      i(class = icon).wi

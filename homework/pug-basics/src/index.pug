@@ -10,25 +10,40 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Box model 
     //- * Styles
-    link(rel='stylesheet' href='../index.css')
+    link(rel='stylesheet' href='./index.css')
     //- * Icons
     link(rel='stylesheet' href='./icons/weather-icons.min.css')
     //- * Favicon
-    link(rel='shortcut icon' href='../../favicon.ico' type='image/x-icon')
+    link(rel='shortcut icon' href='./favicon.ico' type='image/x-icon')
     //- * Fonts
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel='stylesheet')
   body 
-  .app 
-    a(href="") HOME
-    //- * Header
-    +header 
-    //-  * Table
-    main.wrapper.wrapper-table 
-      .row 
-        .row-block--large.row-block--light-blue.row-block-wrapper
-          div   
-            span Lisbon
-            div 21°C
-        .row-block--small.row-block--dark-blue.row-block-wrapper
+    .app 
+      a(href="../../index.html") HOME
+      //- * Header
+      +header 
+      //-  * Table
+      main.wrapper.wrapper-table
+        //- * First row
+        .row 
+          +city-wrapper('row-block--large', 'row-block--light-blue', 'Lisbon', '21°C', 'wi-day-sunny')
+          +city-wrapper('row-block--small', 'row-block--dark-blue', 'Paris', '11°C', 'wi-night-showers')
+          +city-wrapper('row-block--small', 'row-block--violet', 'Belgrade', '15°C', 'wi-day-cloudy')
+        //- * Second row
+        .row 
+          +city-wrapper('row-block--small', 'row-block--red', 'Venice', '21°C', 'wi-day-sunny')
+          +city-wrapper('row-block--small', 'row-block--orange', 'Tel-Avive', '32°C', 'wi-hot')
+          +city-wrapper('row-block--small', 'row-block--yellow', 'Cair', '21°C', 'wi-day-sunny')
+          +city-wrapper('row-block--small', 'row-block--light-green', 'New-york', '17°C', 'wi-day-storm-showers')
+        //- * Third row
+        .row
+          +city-wrapper('row-block--small', 'row-block--dark-green', 'New-Delhi', '17°C', 'wi-rain')
+          +city-wrapper('row-block--large', 'row-block--pink', 'San-Francisco', '15°C', 'wi-day-fog')
+          +city-wrapper('row-block--small', 'row-block--normal-green', 'Tokyo', '8°C', 'wi-night-clear')
+        //- * Fourth row
+        .row
+          +city-wrapper('row-block--whole-width', 'row-block--purple', 'Sydney', '25°C', 'wi-day-cloudy')
+      +footer
+
