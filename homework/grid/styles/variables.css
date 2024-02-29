@@ -1,0 +1,18 @@
+:root {
+  /* * Colors */
+  --c-grey-light: #e0e0e0;
+  --c-grey-dark: #4f4f4f;
+  --c-white: #fff;
+  /* * Fonts */
+  /* Font families */
+  --f-base: "Roboto", sans-serif;
+  --f-decorate: "Delius Unicase", cursive;
+  /* Font weights */
+  --fw-base: 400;
+  /* Font sizes */
+  --fs-small: 20px;
+  --fs-heading: 36px;
+  --fs-icon: 40px;
+  /* * Transition */
+  --t-normal: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}

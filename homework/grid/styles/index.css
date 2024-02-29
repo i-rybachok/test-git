@@ -1,0 +1,132 @@
+/* * Global */
+body {
+  background-color: var(--c-white);
+  font-family: var(--f-base);
+  font-weight: var(--fw-base);
+  font-size: var(--fs-small);
+}
+
+img {
+  border-radius: 20px;
+  opacity: 0.7;
+  /* For making images full height of the grip cell */
+  height: 100%;
+  transition: var(--t-normal);
+}
+
+h1 {
+  font-family: var(--f-decorate);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-base);
+  text-align: center;
+  margin: 120px 0 80px;
+}
+
+.wrapper {
+  margin: 120px 135px 80px;
+}
+
+/* * Architectural Photography */
+.architectural {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* * Still Life Photography */
+.still-life {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 30px;
+}
+
+/* * For both architectural and still-life */
+.img-big-one {
+  grid-area: 1/2/2/4;
+}
+
+.img-big-two {
+  grid-area: 2/1/3/3;
+}
+
+.img-big-three {
+  grid-area: 3/2/4/4;
+}
+
+
+/* * Portrait and Fashion Photography */
+.portrait {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.img-tall-one {
+  grid-area: 1/2/3/3;
+}
+
+.img-tall-two {
+  grid-area: 2/3/4/4;
+}
+
+.img-tall-three {
+  grid-area: 3/1/5/2;
+}
+
+.img-wide-one {
+  grid-area: 4/2/5/4;
+}
+
+.img-wide-two {
+  grid-area: 5/1/6/3;
+}
+
+
+/* * Text */
+/* Зробила текст як на прикладі лише для одного фото */
+.container {
+  position: relative;
+  color: var(--c-white);
+  transition: var(--t-normal);
+}
+
+.container-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* * Icons */
+.icon {
+  color: var(--c-grey-dark);
+  background-color: var(--c-grey-light);
+  font-size: var(--fs-icon);
+  padding: 8px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: var(--t-normal);
+  cursor: pointer;
+}
+
+.container-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:hover .icon {
+  opacity: 1;
+}
+
+.container:hover img {
+  opacity: 1;
+}
