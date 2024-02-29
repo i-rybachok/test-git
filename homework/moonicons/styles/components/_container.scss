@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  gap: 30px;
+  &-block {
+    border-radius: 8px;
+    border: 1px solid var(--c-grey-three);
+    padding: 40px;
+    transition: border-color 0.35s ease-in-out;
+    &:hover {
+      border-color: var(--c-green);
+    }
+  }
+}

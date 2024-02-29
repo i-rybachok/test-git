@@ -1,0 +1,20 @@
+.logo {
+  font-size: var(--fs-logo);
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  &-icon {
+    color: var(--c-green);
+  }
+  &-text {
+    &-header {
+      color: var(--c-black);
+    }
+    &-footer {
+      color: var(--c-white);
+    }
+  }
+  &-footer {
+    margin-bottom: 40px;
+  }
+}
