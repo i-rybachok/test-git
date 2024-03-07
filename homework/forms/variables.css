@@ -1,0 +1,21 @@
+:root {
+  /* * Fonts */
+  /* Font family */
+  --f-base: "Roboto", sans-serif;
+  /* Font weight */
+  --fw-base: 400;
+  --fw-bold: 500;
+  /* Font sizes */
+  --fs-base: 16px;
+  --fs-small: 14px;
+  --fs-little: 12px;
+  --fs-large: 24px;
+  /* * Colors */
+  --c-white-light: #fff;
+  --c-white-dark: #f7f7f7;
+  --c-black: #1c1c1c;
+  --c-grey-dark: #545454;
+  --c-grey-light: #969696;
+  --c-blue: #007bff;
+  --c-red: #ff0000;
+}

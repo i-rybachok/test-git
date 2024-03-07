@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <!-- * Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <!-- * Styles -->
+    <link rel="stylesheet" href="../../normalize.css" />
+    <link rel="stylesheet" href="./variables.css" />
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <!-- * Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-trash" viewBox="0 0 32 32">
+          <path
+            d="M5.333 28.445c0 1.955 1.6 3.555 3.556 3.555h14.222c1.956 0 3.556-1.6 3.556-3.555v-21.333h-21.333v21.333zM28.444 1.778h-6.222l-1.778-1.778h-8.889l-1.778 1.778h-6.222v3.556h24.889v-3.556z"
+          ></path>
+        </symbol>
+        <symbol id="icon-photo" viewBox="0 0 32 32">
+          <path
+            d="M8.272 4.8l2.928-3.2h9.6l2.928 3.2h5.072c1.76 0 3.2 1.44 3.2 3.2v19.2c0 1.76-1.44 3.2-3.2 3.2h-25.6c-1.76 0-3.2-1.44-3.2-3.2v-19.2c0-1.76 1.44-3.2 3.2-3.2h5.072zM8 17.6c0 4.416 3.584 8 8 8s8-3.584 8-8c0-4.416-3.584-8-8-8s-8 3.584-8 8zM16 22.72c2.828 0 5.12-2.292 5.12-5.12s-2.292-5.12-5.12-5.12c-2.828 0-5.12 2.292-5.12 5.12s2.292 5.12 5.12 5.12z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <div class="wrapper">
+      <!-- * Modal-box "Sign-up" -->
+      <div class="wrapper-module">
+        <h1>Create an Account</h1>
+        <form method="get" class="form">
+          <div class="form-item form-item-small">
+            <label>
+              <div>First Name</div>
+              <input type="text" class="input" required />
+              <div class="error">Invalid first name</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Last Name</div>
+              <input type="text" class="input" required />
+              <div class="error">Invalid last name</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-large">
+            <label>
+              <div>E-mail</div>
+              <input type="email" class="input" required />
+              <div class="error">Invalid email</div>
+              <div class="info">
+                We'll never share your email with anyone else.
+              </div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-large">
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                class="input-radio"
+                checked
+              />
+              <span>Male</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                class="input-radio"
+              />
+              <span>Female</span>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Country</div>
+              <select name="country" class="input" required>
+                <option value="ukraine">Ukraine</option>
+                <option value="usa">USA</option>
+                <option value="spain">Spain</option>
+              </select>
+              <div class="error">This field is necessary</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>City</div>
+              <input type="text" class="input" required />
+              <div class="error">Invalid city</div>
+            </label>
+          </div>
+
+          <button type="submit" class="button form-item-large">
+            <span>Sign up</span>
+          </button>
+        </form>
+        <div class="policy">
+          By clicking the 'Sign Up' button, you confirm that you accept our
+          <a href="#">Terms of Use</a> and
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="log-in">
+          Have an account?
+          <a href="#" class="log-in-link">Log In</a>
+        </div>
+      </div>
+
+      <!-- * Modal-box "Update" -->
+      <div class="wrapper-module">
+        <h1>Profile</h1>
+        <form method="get" class="form">
+          <div class="form-item form-item-large form-item-files">
+            <img src="./assets/photo.png" alt="photo" />
+            <div class="form-item-files-content">
+              <label class="form-item-files-load input">
+                <input type="file" class="form-item-files-input" />
+                <svg class="icon icon-photo">
+                  <use xlink:href="#icon-photo"></use>
+                </svg>
+              </label>
+              <div class="info">Up to 1 MB (300x300 px)</div>
+            </div>
+            <svg class="icon icon-trash">
+              <use xlink:href="#icon-trash"></use>
+            </svg>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Name</div>
+              <input type="text" class="input" required />
+              <div class="error">Invalid last name</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>E-mail</div>
+              <input type="email" class="input" required />
+              <div class="error">Invalid email</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Country</div>
+              <input
+                type="select"
+                placeholder="Select"
+                class="input"
+                required
+              />
+
+              <div class="error">This field is necessary</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>City</div>
+              <input type="text" class="input" required />
+              <div class="error">Invalid city</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Zip code</div>
+              <input type="number" class="input" required />
+              <div class="error">Invalid zip code</div>
+            </label>
+          </div>
+
+          <div class="form-item form-item-small">
+            <label>
+              <div>Phone Number</div>
+              <input type="number" class="input" required />
+              <div class="error">Invalid phone number</div>
+            </label>
+          </div>
+
+          <button type="submit" class="button button--small form-item-small">
+            <span>Update</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

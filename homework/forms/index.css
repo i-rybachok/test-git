@@ -1,0 +1,167 @@
+/* * Global */
+
+body {
+  font-family: var(--f-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-base);
+  background: var(--c-white-dark);
+  color: var(--c-grey-dark);
+}
+
+h1 {
+  color: var(--c-black);
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+  margin-bottom: 20px;
+}
+
+a {
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+img {
+  width: 15%;
+}
+
+.icon {
+  color: var(--c-grey-light);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 55px 135px;
+}
+
+.wrapper-module {
+  grid-column: 1fr;
+  background: var(--c-white-light);
+  border-radius: 8px;
+  padding: 36px 34px 16px;
+}
+
+/* * FORMS */
+
+/* * Form items */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+.form-item-small {
+  grid-column: span 1;
+}
+
+.form-item-large {
+  grid-column: span 2;
+}
+
+/* * Form elements */
+.input {
+  outline: none;
+  border: 1px solid var(--c-grey-light);
+  border-radius: 4px;
+  height: 38px;
+  margin-top: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.input:focus-visible {
+  outline: none;
+  border: 1px solid var(--c-blue);
+}
+
+.info {
+  color: var(--c-grey-light);
+  margin-top: 5px;
+}
+
+.input-radio[value="female"] {
+  margin-left: 20px;
+}
+
+.input:invalid+.error {
+  opacity: 1;
+}
+
+.input-radio {
+  width: auto;
+}
+
+.error {
+  color: var(--c-red);
+  opacity: 0;
+  font-size: var(--fs-little);
+  margin-top: 5px;
+}
+
+.form-item-files {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.form-item-files-load {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: 1px solid var(--c-grey-light);
+  display: flex;
+  justify-content: right;
+}
+
+.form-item-files-input {
+  display: none;
+}
+
+/* * Additional information */
+.policy {
+  color: var(--c-grey-light);
+  border-bottom: 1px solid var(--c-grey-light);
+  padding: 20px 45px;
+  text-align: center;
+}
+
+.policy-highlight {
+  color: var(--c-blue);
+  font-weight: var(--fw-bold);
+}
+
+.log-in {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.log-in-link {
+  font-weight: var(--fw-bold);
+  margin-left: 20px;
+}
+
+.button {
+  background: var(--c-blue);
+  color: var(--c-white-light);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  height: 38px;
+}
+
+.button--small {
+  width: 50%;
+}
+
+.icon-photo {
+  margin: 8px;
+}
+
+.icon-trash {
+  margin-left: 10px;
+  font-size: 38px;
+  padding: 10px;
+  border: 1px solid var(--c-grey-light);
+  border-radius: 4px;
+  color: var(--c-grey-light);
+}
