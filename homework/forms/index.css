@@ -22,6 +22,7 @@ a {
 
 img {
   width: 15%;
+  align-self: flex-start;
 }
 
 .icon {
@@ -107,11 +108,17 @@ img {
 }
 
 .form-item-files-load {
-  margin-left: 20px;
   margin-bottom: 10px;
+  margin-top: 0;
   border: 1px solid var(--c-grey-light);
   display: flex;
   justify-content: right;
+  position: relative;
+}
+
+.form-item-files-content {
+  margin-left: 20px;
+  align-self: flex-start;
 }
 
 .form-item-files-input {
@@ -164,4 +171,5 @@ img {
   border: 1px solid var(--c-grey-light);
   border-radius: 4px;
   color: var(--c-grey-light);
+  align-self: flex-start;
 }
