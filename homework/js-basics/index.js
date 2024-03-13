@@ -29,7 +29,7 @@ const speed = distance / time;
 console.log('The minimum speed should be ' + speed + '(km/h)');
 
 // task 3
-const dollars = prompt('Enter the euros', 100);
+const dollars = prompt('Enter the dollars', 100);
 const euros = dollars * 0.91;
 console.log('In euros it will be: ' + euros);
 
