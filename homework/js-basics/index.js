@@ -8,8 +8,8 @@ console.log(greeting);
 
 // task 2
 const userAge = prompt('What is your birth year?'); // here i didn't use a default parameter
-let currentYear = 2024;
-console.log('You are ' + (currentYear - userAge) + ' years old'); // here I used '+' for concatenation (the space won;t be added unless i do it myself)
+let CURRENTYEAR = 2024;
+console.log('You are ' + (CURRENTYEAR - userAge) + ' years old'); // here I used '+' for concatenation (the space won;t be added unless i do it myself)
 
 // task 3
 const squareSide = prompt("What is the length of square's one side?", 3);
@@ -19,7 +19,7 @@ console.log('The perimeter is', squareSide * 4); // here I used ',' to concatena
 
 // task 1
 const radius = prompt('Enter the radius of a circle, please', 4);
-const PI = 3.14; //I named the variable in uppercase beacause it is an primitives, it is an unchangable mathemetical law
+const PI = 3.14; //I named the variable in uppercase beacause it is a primitives, it is an unchangable mathemetical law
 console.log('The approximate area of a circle is ' + radius * radius * PI); //the area of square = radius^2 * PI
 
 // task 2
@@ -38,7 +38,7 @@ console.log('In euros it will be: ' + euros);
 // prompt was used in previous exercises
 
 // alert
-const a = alert('Show a message'); // it will only show a message in a module window
+alert('Show a message'); // it will only show a message in a module window
 
 // confirm
-const b = confirm('Do you like jazz?'); //it asks only true/false questions
+confirm('Do you like jazz?'); //it asks only true/false questions
