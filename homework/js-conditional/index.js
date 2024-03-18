@@ -13,7 +13,7 @@ let i = 0;
 while (i <= 5) {
   start /= 2;
 
-  if (question === true) {
+  if (question) {
     question = confirm(`Ваше число > ${range + start}?`);
     range += start;
   } else {
@@ -24,7 +24,7 @@ while (i <= 5) {
   i++;
 }
 
-if (question === true) {
+if (question) {
   alert(`Ваше число: ${Math.ceil(range)}`);
 } else {
   alert(`Ваше число: ${Math.floor(range)}`);
