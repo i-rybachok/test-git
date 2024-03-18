@@ -7,10 +7,10 @@ let range = 50;
 let start = 50;
 
 const num = prompt(`Буль даска, введіть число від 0 до 100`, 55); //можно і alert, оскільки ми число вгадуємо, і ці дані не потрібні для коду
-let question = confirm(`Ваше число > ${range}?`);
+let question = confirm(`Ваше число >= ${range}?`);
 
 let i = 0;
-while (i <= 4) {
+while (i <= 5) {
   start /= 2;
 
   if (question === true) {
