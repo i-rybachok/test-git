@@ -223,7 +223,7 @@ const userMonth = +prompt(`Будь даска, введіть місяць да
 const userYear = +prompt(`Будь даска, введіть рік дати`, 2024);
 const dateArray = [userDay, userMonth, userYear];
 
-// Тут, мабуть, перевірок має бути набагато більше
+// ! Тут, мабуть, перевірок має бути набагато більше
 if (
   isNaN(userDay) ||
   isNaN(userMonth) ||
