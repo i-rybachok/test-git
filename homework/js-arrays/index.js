@@ -1,3 +1,3 @@
-import taskShoppingList from './task-1-2-3.js';
+import taskShoppingList from './taskShoppingList.js';
 
 console.log(taskShoppingList());
