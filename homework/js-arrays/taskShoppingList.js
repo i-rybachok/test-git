@@ -71,6 +71,7 @@ function taskShoppingList() {
   // Видалення продукту зі списку (видалення повинно проводитися шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
   function deleteProduct(productName) {
     let newShoppingList = [];
+
     for (let item of shoppingList) {
       if (item.name === productName) {
         continue;
@@ -78,6 +79,7 @@ function taskShoppingList() {
         newShoppingList.push(item);
       }
     }
+
     return newShoppingList;
   }
 
@@ -87,16 +89,16 @@ function taskShoppingList() {
   // необхідно збільшувати кількість в існуючій покупці,
   // а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12,
   // а кількості товарів стало 2, то сума буде 24.
-  function addProduct(productName, productQuantity, productPrice) {
-    for (let item of shoppingList) {
+  function addProduct(productName, productQuantity, productPrice, list) {
+    for (let item of list) {
       if (item.name === productName) {
         item.quantity += productQuantity;
         return;
       }
     }
-    for (let item of shoppingList) {
+    for (let item of list) {
       if (!(item.name === productName)) {
-        shoppingList.push({
+        list.push({
           name: productName,
           quantity: productQuantity,
           isBought: false,
@@ -110,7 +112,7 @@ function taskShoppingList() {
     }
   }
 
-  addProduct('Pancakes', 8, 15);
+  addProduct('Pancakes', 8, 15, shoppingList);
   console.log(shoppingList);
 
   // * task 3
@@ -165,6 +167,30 @@ function taskShoppingList() {
     }
   }
 
+  // * task 4 (Вебсховище)
+  // Тут я додаю до LocalStorage ввесь ShoppingList у вигляді string (stringify)
+  const shoppingListToString = JSON.stringify(shoppingList);
+  localStorage.setItem('test1', shoppingListToString);
+
+  console.log(
+    `Data from Local Storage (string): ${localStorage.getItem('test1')}`
+  );
+
+  // Тут розпарсую shoppingListToString і додаю 'Wine'
+
+  const shoppingListParse = JSON.parse(shoppingListToString);
+  addProduct('Wine', 120, 1, shoppingListParse);
+
+  const shoppingListParseToString = JSON.stringify(shoppingListParse);
+  localStorage.setItem('test2', shoppingListParseToString);
+
+  console.log(
+    `Data from Local Storage (that previously was parsed): ${localStorage.getItem(
+      'test2'
+    )}`
+  );
+
+  // * Continuation of task 3 (returning showSortedProducts())
   // Тут поставила return, а не console.log(), щоб вся велика функція taskShoppingList() не повертала undefined
   return showSortedProducts();
 }

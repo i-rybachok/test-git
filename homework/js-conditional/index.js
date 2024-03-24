@@ -218,22 +218,22 @@ for (let i = 2; i <= 9; i++) {
 // * task 12
 // Запитай дату (день, місяць, рік) і виведи наступну за нею дату. Враховуй можливість переходу на наступний місяць, рік, а також високосний рік.
 
+const checkDate = (date) => {
+  if (isNaN(date) || date <= 0) {
+    throw new Error('Wrong data');
+  }
+};
+
 const userDay = +prompt(`Будь даска, введіть день дати`, 20);
+checkDate(userDay);
 const userMonth = +prompt(`Будь даска, введіть місяць дати`, 3);
+checkDate(userMonth);
 const userYear = +prompt(`Будь даска, введіть рік дати`, 2024);
+checkDate(userYear);
+
 const dateArray = [userDay, userMonth, userYear];
 
-// ! Тут, мабуть, перевірок має бути набагато більше
-if (
-  isNaN(userDay) ||
-  isNaN(userMonth) ||
-  isNaN(userYear) ||
-  userDay <= 0 ||
-  userMonth <= 0 ||
-  userYear <= 0 ||
-  userDay >= 32 ||
-  userMonth >= 13
-) {
+if (userDay >= 32 || userMonth >= 13) {
   throw new Error(`Неправильно введена дата`);
 }
 
