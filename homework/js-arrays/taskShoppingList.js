@@ -36,19 +36,29 @@ function taskShoppingList() {
   // Написати кілька функцій для роботи з таким масивом:
   //   1)Виводити весь список на екран таким чином, щоб спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
   function showShoppingList() {
-    let itemsBought = [];
-    let itemsNotBought = [];
-    for (let item of shoppingList) {
-      if (!item.isBought) {
-        itemsNotBought.push(item.name);
-      }
-    }
-
-    for (let item of shoppingList) {
+    // Використання map
+    let itemsBought = shoppingList.map((item) => {
       if (item.isBought) {
-        itemsBought.push(item.name);
+        return item.name;
       }
-    }
+    });
+
+    // Використання filter
+    itemsBought = itemsBought.filter((item) => item);
+
+    let itemsNotBought = shoppingList.map((item) => {
+      if (!item.isBought) {
+        return item.name;
+      }
+    });
+
+    itemsNotBought = itemsNotBought.filter((item) => item);
+
+    // for (let item of shoppingList) {
+    //   if (item.isBought) {
+    //     itemsBought.push(item.name);
+    //   }
+    // }
 
     return itemsNotBought.concat(itemsBought);
   }
@@ -120,9 +130,8 @@ function taskShoppingList() {
   function sumProducts() {
     let sum = 0;
 
-    for (let item of shoppingList) {
-      sum += item.calcSum();
-    }
+    // Використання forEach
+    shoppingList.forEach((item) => (sum += item.calcSum()));
 
     return sum;
   }
