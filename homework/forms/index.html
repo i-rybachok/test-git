@@ -44,28 +44,28 @@
       <!-- * Modal-box "Sign-up" -->
       <div class="wrapper-module">
         <h1>Create an Account</h1>
-        <form method="get" class="form">
+        <form method="get" class="form" id="js-form">
           <div class="form-item form-item-small">
             <label>
               <div>First Name</div>
-              <input type="text" class="input" required />
-              <div class="error">Invalid first name</div>
+              <input type="text" class="input" name="firstName" />
+              <div class="error" id="js-firstname-error">Invalid data</div>
             </label>
           </div>
 
           <div class="form-item form-item-small">
             <label>
               <div>Last Name</div>
-              <input type="text" class="input" required />
-              <div class="error">Invalid last name</div>
+              <input type="text" class="input" name="lastName" />
+              <div class="error" id="js-lastname-error">Invalid data</div>
             </label>
           </div>
 
           <div class="form-item form-item-large">
             <label>
               <div>E-mail</div>
-              <input type="email" class="input" required />
-              <div class="error">Invalid email</div>
+              <input type="email" class="input" name="email" />
+              <div class="error" id="js-email-error">Invalid data</div>
               <div class="info">
                 We'll never share your email with anyone else.
               </div>
@@ -97,20 +97,19 @@
           <div class="form-item form-item-small">
             <label>
               <div>Country</div>
-              <select name="country" class="input" required>
+              <select name="country" class="input">
                 <option value="ukraine">Ukraine</option>
                 <option value="usa">USA</option>
                 <option value="spain">Spain</option>
               </select>
-              <div class="error">This field is necessary</div>
             </label>
           </div>
 
           <div class="form-item form-item-small">
             <label>
               <div>City</div>
-              <input type="text" class="input" required />
-              <div class="error">Invalid city</div>
+              <input type="text" class="input" name="city" />
+              <div class="error" id="js-city-error">Invalid data</div>
             </label>
           </div>
 
