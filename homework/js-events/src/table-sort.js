@@ -1,6 +1,6 @@
 const tableSort = (n) => {
-  let table = document.getElementById('table');
-  let rows = table.rows;
+  let DOMtable = document.getElementById('table');
+  let rows = DOMtable.rows;
   let switching = true;
 
   function switchRows() {
