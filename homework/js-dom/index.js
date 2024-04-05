@@ -1,78 +1,88 @@
-// Дістаю елемент за id
-// .getElementById поверне лише 1 елемент, але багато інших - список
-let DOMList = document.getElementById('list');
+function addDOM() {
+  // Дістаю елемент за id
+  // .getElementById поверне лише 1 елемент, але багато інших - список
+  const DOMList = document.getElementById('list');
 
-let playlist = [
-  {
-    author: 'LED ZEPPELIN',
+  // Перевіряю, чи є DOMList
+  if (!DOMList) return;
 
-    song: 'STAIRWAY TO HEAVEN',
-  },
+  const playlist = [
+    {
+      author: 'LED ZEPPELIN',
 
-  {
-    author: 'QUEEN',
+      song: 'STAIRWAY TO HEAVEN',
+    },
 
-    song: 'BOHEMIAN RHAPSODY',
-  },
+    {
+      author: 'QUEEN',
 
-  {
-    author: 'LYNYRD SKYNYRD',
+      song: 'BOHEMIAN RHAPSODY',
+    },
 
-    song: 'FREE BIRD',
-  },
+    {
+      author: 'LYNYRD SKYNYRD',
 
-  {
-    author: 'DEEP PURPLE',
+      song: 'FREE BIRD',
+    },
 
-    song: 'SMOKE ON THE WATER',
-  },
+    {
+      author: 'DEEP PURPLE',
 
-  {
-    author: 'JIMI HENDRIX',
+      song: 'SMOKE ON THE WATER',
+    },
 
-    song: 'ALL ALONG THE WATCHTOWER',
-  },
+    {
+      author: 'JIMI HENDRIX',
 
-  {
-    author: 'AC/DC',
+      song: 'ALL ALONG THE WATCHTOWER',
+    },
 
-    song: 'BACK IN BLACK',
-  },
+    {
+      author: 'AC/DC',
 
-  {
-    author: 'QUEEN',
+      song: 'BACK IN BLACK',
+    },
 
-    song: 'WE WILL ROCK YOU',
-  },
+    {
+      author: 'QUEEN',
 
-  {
-    author: 'METALLICA',
+      song: 'WE WILL ROCK YOU',
+    },
 
-    song: 'ENTER SANDMAN',
-  },
-];
+    {
+      author: 'METALLICA',
 
-// Створюю функцію для додавання усіх li в list
-function addDOMListItems(playlist, DOMList) {
-  playlist.forEach((item) => {
-    let DOMListItem = document.createElement('li');
+      song: 'ENTER SANDMAN',
+    },
+  ];
 
-    // Додаю клас до li (для практики)
-    DOMListItem.classList.add('js-list-item');
+  // Перевіряю, чи DOMList - це <ol> або <ul>
+  if (DOMList.tagName === 'OL' || DOMList.tagName === 'UL') {
+    // Створюю функцію для додавання усіх li в list
+    function addDOMListItems(playlist, DOMList) {
+      playlist.forEach((item) => {
+        const DOMListItem = document.createElement('li');
 
-    // Додаю текст до li
-    DOMListItem.textContent = `${item.author}: ${item.song}`;
+        // Додаю клас до li (для практики)
+        DOMListItem.classList.add('js-list-item');
 
-    // Додаю li в ol
-    DOMList.append(DOMListItem);
-  });
-}
+        // Додаю текст до li
+        DOMListItem.textContent = `${item.author}: ${item.song}`;
 
-addDOMListItems(playlist, DOMList);
+        // Додаю li в ol
+        DOMList.append(DOMListItem);
+      });
+    }
 
-// Додати до кожного другого li колір
-for (let i = 0; i < DOMList.childNodes.length; i++) {
-  if (i % 2) {
-    DOMList.childNodes[i].style.color = 'green';
+    addDOMListItems(playlist, DOMList);
+
+    // Додати до кожного другого li колір
+    for (let i = 0; i < DOMList.childNodes.length; i++) {
+      if (i % 2) {
+        DOMList.childNodes[i].style.color = 'green';
+      }
+    }
   }
 }
+
+addDOM();
