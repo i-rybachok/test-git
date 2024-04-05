@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Classes</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>JavaScript Classes</h1>
+
+      <!-- * Task 'addClassMarker' -->
+      <h2>AddClassMarker</h2>
+      <div id="js-ink-div"></div>
+      <hr />
+
+      <!-- * Task addEmployee -->
+      <h2>addEmployee</h2>
+      <div id="js-employee"></div>
+      <hr />
+
+      <!-- * Task 'addClassUser' -->
+      <h2>addClassUser</h2>
+      <form method="get" id="js-form-user">
+        <input type="text" name="name" id="js-input-name" />
+        <input type="password" name="password" id="js-input-password" />
+        <button type="submit">LogIn</button>
+      </form>
+      <hr />
+
+      <!-- * Task 'AddClassClock' -->
+      <h2>AddClassClock</h2>
+      <form method="get" id="js-form-time">
+        <input type="text" name="time" id="js-input-time" />
+        <button type="submit">Add a clock</button>
+      </form>
+
+      <div class="wrapper">
+        <div class="wrapper-clock">
+          <div id="clock1"></div>
+          <button class="js-show-time-clock">Show time</button>
+          <button class="js-show-date-clock">Show date and time</button>
+          <button class="js-delete-button">Delete clock</button>
+        </div>
+        <div class="wrapper-clock">
+          <div id="clock2"></div>
+          <button class="js-show-time-clock">Show time</button>
+          <button class="js-show-date-clock">Show date and time</button>
+          <button class="js-delete-button">Delete clock</button>
+        </div>
+        <div class="wrapper-clock">
+          <div id="clock3"></div>
+          <button class="js-show-time-clock">Show time</button>
+          <button class="js-show-date-clock">Show date and time</button>
+          <button class="js-delete-button">Delete clock</button>
+        </div>
+      </div>
+
+      <div id="js-show-time"></div>
+      <div id="js-show-date-and-time"></div>
+      <div id="js-delete-clock"></div>
+    </div>
+    <script type="module" defer src="./index.js"></script>
+  </body>
+</html>

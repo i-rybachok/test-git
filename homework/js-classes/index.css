@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#clock1,
+#clock2,
+#clock3 {
+  border-radius: 50%;
+  background-color: thistle;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  align-content: center;
+}
