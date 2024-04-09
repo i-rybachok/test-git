@@ -10,28 +10,45 @@
 // 2 кнопка — показує користувачу поточну дату й час у текстовому варіанті
 // 3 кнопка — видаляє годинник зі «стіни» годинників
 
-const addClassClock = () => {
-  const DOMClock1 = document.getElementById('clock1');
-  const DOMClock2 = document.getElementById('clock2');
-  const DOMClock3 = document.getElementById('clock3');
+class Clock {
+  #time = null;
+  #DOMClock = null;
 
-  class Clock {
-    constructor(time) {
-      this.time = new Date(time);
+  constructor(id) {
+    const DOMClock = document.getElementById(id);
+    if (!DOMClock) {
+      throw new Error('Element is not defined');
     }
-
-    getCurrentTime() {
-      this.time = this.time.getHours();
-    }
-
-    getCurrentDate() {
-      this.time = this.time.getDate();
-    }
-
-    deleteClock(DOMClock) {
-      DOMClock.textContent = '';
-    }
+    this.#DOMClock = DOMClock;
+    console.log('time', this.time);
   }
+
+  get time() {
+    return this.#time;
+  }
+
+  set time(t) {
+    this.#time = new Date(t);
+  }
+
+  getCurrentTime() {
+    return this.#time.getHours();
+  }
+
+  getCurrentDate() {
+    return this.#time.getDate();
+  }
+
+  destroy() {
+    this.#DOMClock.remove();
+  }
+}
+
+const addClassClock = () => {
+  // const DOMClock1 = document.getElementById('clock1');
+  // const DOMClock2 = document.getElementById('clock2');
+  // const DOMClock3 = document.getElementById('clock3');
+  const clock1 = new Clock('js-clock-1');
 
   const DOMform = document.getElementById('js-form-time');
   if (!DOMform) return;
@@ -50,27 +67,26 @@ const addClassClock = () => {
       throw new Error('No time is entered');
     }
 
+    // ! REGEXP
     if (time.length < 7) {
       throw new Error('Not enough numbers');
     }
 
-    const data = {
-      time,
-    };
-
     //* Add time to the clock
     // Create a new example of a class
-    const newClock = new Clock(data.time);
 
     // add textContent to a free clock
-    if (!DOMClock1.textContent) {
-      DOMClock1.textContent = newClock.time;
-    } else if (!DOMClock2.textContent) {
-      DOMClock2.textContent = newClock.time;
-    } else if (!DOMClock3.textContent) {
-      DOMClock3.textContent = newClock.time;
-    } else {
-      throw new Error('No more space for new clocks');
+    // if (!DOMClock1.textContent) {
+    //   DOMClock1.textContent = newClock.time;
+    // } else if (!DOMClock2.textContent) {
+    //   DOMClock2.textContent = newClock.time;
+    // } else if (!DOMClock3.textContent) {
+    //   DOMClock3.textContent = newClock.time;
+    // } else {
+    //   throw new Error('No more space for new clocks');
+    // }
+    if (!clock1.time) {
+      clock1.time = time;
     }
 
     //* Add showTime buttons
@@ -80,6 +96,7 @@ const addClassClock = () => {
     DOMshowTimeButton[0].addEventListener('click', () => {
       newClock.getCurrentTime();
       DOMClock1.textContent = newClock.time;
+      // console.log(newClock);
     });
 
     DOMshowTimeButton[1].addEventListener('click', () => {
@@ -95,11 +112,11 @@ const addClassClock = () => {
     //* Add showDate buttons
     const DOMshowDateButton =
       document.getElementsByClassName('js-show-date-clock');
-    console.log('DOMshowDateButton: ', DOMshowDateButton);
 
     DOMshowDateButton[0].addEventListener('click', () => {
       newClock.getCurrentDate();
       DOMClock1.textContent = newClock.time;
+      // console.log(newClock);
     });
 
     DOMshowDateButton[1].addEventListener('click', () => {
@@ -117,6 +134,7 @@ const addClassClock = () => {
 
     DOMdeleteButton[0].addEventListener('click', () => {
       newClock.deleteClock(DOMClock1);
+      // console.log(newClock);
     });
 
     DOMdeleteButton[1].addEventListener('click', () => {
